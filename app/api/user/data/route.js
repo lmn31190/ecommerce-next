@@ -14,7 +14,7 @@ export async function GET(request) {
         const user = await User.findById(userId)
 
         if (!user) {
-            return NextResponse.json({ success: false })
+            return NextResponse.json({ success: true, message: "Connecté" })
         }
 
         return NextResponse.json({success:true, user})
